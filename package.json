@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:run": "./node_modules/.bin/cypress open",
-    "cypress:report": "generate-mochawesome-report",
-    "test-and-report": "npm run cypress:run ; npm run cypress:report"  
+    "test": "npm run clean-reports && cypress run",
+    "clean-reports": "rm -rf mochawesome-report/ ",
+    "merge-reports": "mochawesome-merge ./mochawesome-report/*.json -o output.json",
+    "generate-report": "marge mochawesome-report/*.json",
+    "cypress": "npm run clean-reports; npx cypress run; npm run generate-report"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +19,11 @@
   },
   "devDependencies": {
     "cypress": "^6.3.0",
-    "cypress-mochawesome-reporter": "^1.3.0"
+    "cypress-mochawesome-reporter": "^1.3.0",
+    "cypress-multi-reporters": "^1.4.0",
+    "mocha-junit-reporter": "^2.0.0",
+    "mochawesome": "^6.2.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.1.0"
   }
 }

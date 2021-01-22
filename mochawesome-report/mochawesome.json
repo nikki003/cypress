@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-01-22T07:47:27.197Z",
+    "end": "2021-01-22T07:47:41.997Z",
+    "duration": 14800,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a1bc5fe9-1e7e-478d-b845-11541f5a2fe9",
+      "title": "",
+      "fullFile": "cypress/integration/printmymemory-register.spec.js",
+      "file": "cypress/integration/printmymemory-register.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "06f526d6-84e8-4a32-9803-45960fc3fc3f",
+          "title": "PrintMyMemory",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Register",
+              "fullTitle": "PrintMyMemory Register",
+              "timedOut": null,
+              "duration": 10869,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"/home/alite-10/Documents/Github/cypress/mochawesome-report/screenshots/printmymemory-register.spec.js/PrintMyMemory -- Register (failed).png\"",
+              "code": "// visits page\ncy.visit(\"https://printmymemory.com/register\"); // takes action like filling up the form\nvar firstName = faker.name.firstName();\nvar lastName = faker.name.lastName();\nvar email = faker.internet.email();\nvar number = faker.phone.phoneNumber();\ncy.get(\"input#usrFirstName\").type(firstName);\ncy.get(\"input#usrLastName\").type(lastName);\ncy.get(\"input#usrEmail\").type(email);\ncy.get(\"input#usrMobileNo\").type(number); // cy.get(\"button#btnRegisterUser\").click();\n// Assert - make an assertion\ncy.url().should('include', '/userWelcome');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://printmymemory.com/register' to include '/userWelcome'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://printmymemory.com/register' to include '/userWelcome'\n    at Context.eval (https://printmymemory.com/__cypress/tests?p=cypress/integration/printmymemory-register.spec.js:116:14)",
+                "diff": null
+              },
+              "uuid": "2ae6840b-ce6c-442a-b6c4-b787fdeea549",
+              "parentUUID": "06f526d6-84e8-4a32-9803-45960fc3fc3f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2ae6840b-ce6c-442a-b6c4-b787fdeea549"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10869,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

@@ -1,3 +1,10 @@
 {
-    "reporter": "cypress-mochawesome-reporter"
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+    },
+    "video": false,
+    "screenshotsFolder": "mochawesome-report/screenshots/"
 }
