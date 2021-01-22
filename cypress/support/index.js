@@ -21,8 +21,13 @@ import addContext from 'mochawesome/addContext';
 // require('./commands')
 
 Cypress.on('test:after:run', (test, runnable) => {
+    console.log('test: ', test);
+    
     if(test.state === 'failed') {
+        console.log("Adding screenshots");
         const screenshot = `${Cypress.config('screenshotsFolder')}/${Cypress.spec.name}/${runnable.parent.title} -- ${test.title} (failed).png`;
         addContext({ test }, screenshot);
+        
     }
+
 })

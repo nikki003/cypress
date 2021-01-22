@@ -10,11 +10,12 @@
     "clean-reports": "rm -rf mochawesome-report/ ",
     "merge-reports": "mochawesome-merge ./mochawesome-report/*.json -o output.json",
     "generate-report": "marge mochawesome-report/*.json",
-    "cypress": "npm run clean-reports; npx cypress run; npm run generate-report"
+    "cypress": "npm run clean-reports; npx cypress run; npm run generate-report; npm start"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@sendgrid/mail": "^7.4.2",
     "faker": "^5.1.0"
   },
   "devDependencies": {
