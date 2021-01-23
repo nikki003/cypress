@@ -16,7 +16,7 @@ describe('PrintMyMemory', function() {
         cy.get("input#usrEmail").type(email);
         cy.get("input#usrMobileNo").type(number);
 
-        // cy.get("button#btnRegisterUser").click();
+        cy.get("button#btnRegisterUser").click();
 
         // Assert - make an assertion
         cy.url().should('include', '/userWelcome')

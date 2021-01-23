@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2021-01-22T12:25:05.592Z",
-    "end": "2021-01-22T12:25:41.178Z",
-    "duration": 35586,
+    "failures": 0,
+    "start": "2021-01-23T07:41:09.410Z",
+    "end": "2021-01-23T07:41:24.884Z",
+    "duration": 15474,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "4c16cc68-b41f-48b7-a1aa-468962fd9088",
+      "uuid": "50b3bedc-0e66-4190-a5fd-171f6b57ef4a",
       "title": "",
       "fullFile": "cypress/integration/printmymemory-register.spec.js",
       "file": "cypress/integration/printmymemory-register.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "21f028e7-0ef2-4f7b-8a7a-c21c136f131e",
+          "uuid": "5af7e17e-c5e5-42c8-bac7-ba134032fd3f",
           "title": "PrintMyMemory",
           "fullFile": "",
           "file": "",
@@ -38,33 +38,29 @@
               "title": "Register",
               "fullTitle": "PrintMyMemory Register",
               "timedOut": null,
-              "duration": 35506,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 11788,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
-              "context": "\"/home/alite-10/Documents/Github/cypress/mochawesome-report/screenshots/printmymemory-register.spec.js/PrintMyMemory -- Register (failed).png\"",
-              "code": "// visits page\ncy.visit(\"https://printmymemory.com/register\"); // takes action like filling up the form\nvar firstName = faker.name.firstName();\nvar lastName = faker.name.lastName();\nvar email = faker.internet.email();\nvar number = faker.phone.phoneNumber();\ncy.get(\"input#usrFirstName\").type(firstName);\ncy.get(\"input#usrLastName\").type(lastName);\ncy.get(\"input#usrEmail\").type(email);\ncy.get(\"input#usrMobileNo\").type(number); // cy.get(\"button#btnRegisterUser\").click();\n// Assert - make an assertion\ncy.url().should('include', '/userWelcome');",
-              "err": {
-                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://printmymemory.com/register\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
-                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://printmymemory.com/register\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at http://localhost:34057/__cypress/runner/cypress_runner.js:157871:23\n    at visitFailedByErr (http://localhost:34057/__cypress/runner/cypress_runner.js:157231:12)\n    at http://localhost:34057/__cypress/runner/cypress_runner.js:157870:11\n    at tryCatcher (http://localhost:34057/__cypress/runner/cypress_runner.js:10609:23)\n    at Promise._settlePromiseFromHandler (http://localhost:34057/__cypress/runner/cypress_runner.js:8544:31)\n    at Promise._settlePromise (http://localhost:34057/__cypress/runner/cypress_runner.js:8601:18)\n    at Promise._settlePromise0 (http://localhost:34057/__cypress/runner/cypress_runner.js:8646:10)\n    at Promise._settlePromises (http://localhost:34057/__cypress/runner/cypress_runner.js:8722:18)\n    at _drainQueueStep (http://localhost:34057/__cypress/runner/cypress_runner.js:5316:12)\n    at _drainQueue (http://localhost:34057/__cypress/runner/cypress_runner.js:5309:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:34057/__cypress/runner/cypress_runner.js:5325:5)\n    at Async.drainQueues (http://localhost:34057/__cypress/runner/cypress_runner.js:5195:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:34057/__cypress/tests?p=cypress/integration/printmymemory-register.spec.js:104:8)\n\nFrom Node.js Internals:\n  Error: ESOCKETTIMEDOUT\n      at ClientRequest.<anonymous> (/home/alite-10/.cache/Cypress/6.3.0/Cypress/resources/app/packages/server/node_modules/@cypress/request/request.js:816:19)\n      at Object.onceWrapper (events.js:421:28)\n      at ClientRequest.emit (events.js:315:20)\n      at TLSSocket.emitRequestTimeout (_http_client.js:709:9)\n      at Object.onceWrapper (events.js:421:28)\n      at TLSSocket.emit (events.js:327:22)\n      at TLSSocket.Socket._onTimeout (net.js:482:8)\n      at listOnTimeout (internal/timers.js:549:17)\n      at processTimers (internal/timers.js:492:7)\n  ",
-                "diff": null
-              },
-              "uuid": "c5567036-d357-44a2-a341-85dc84a75b95",
-              "parentUUID": "21f028e7-0ef2-4f7b-8a7a-c21c136f131e",
+              "context": null,
+              "code": "// visits page\ncy.visit(\"https://printmymemory.com/register\"); // takes action like filling up the form\nvar firstName = faker.name.firstName();\nvar lastName = faker.name.lastName();\nvar email = faker.internet.email();\nvar number = faker.phone.phoneNumber();\ncy.get(\"input#usrFirstName\").type(firstName);\ncy.get(\"input#usrLastName\").type(lastName);\ncy.get(\"input#usrEmail\").type(email);\ncy.get(\"input#usrMobileNo\").type(number);\ncy.get(\"button#btnRegisterUser\").click(); // Assert - make an assertion\ncy.url().should('include', '/userWelcome');",
+              "err": {},
+              "uuid": "416af608-30a2-480b-a1c0-84767cf2e1b1",
+              "parentUUID": "5af7e17e-c5e5-42c8-bac7-ba134032fd3f",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "c5567036-d357-44a2-a341-85dc84a75b95"
+          "passes": [
+            "416af608-30a2-480b-a1c0-84767cf2e1b1"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 35506,
+          "duration": 11788,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -88,7 +84,7 @@
       "options": {
         "quiet": false,
         "reportFilename": "mochawesome",
-        "saveHtml": false,
+        "saveHtml": true,
         "saveJson": true,
         "consoleReporter": "spec",
         "useInlineDiffs": false,
@@ -99,7 +95,7 @@
     "marge": {
       "options": {
         "overwrite": false,
-        "html": false,
+        "html": true,
         "json": true
       },
       "version": "5.1.0"
